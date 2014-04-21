@@ -4,14 +4,34 @@ ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.3.8',   group: :development
-# Use rspec for testing
-gem 'rspec-rails', '2.13.1', group: :development
 
-gem 'selenium-webdriver', '2.35.1', group: :test
+group :development, :test  do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '1.3.8'
+  # Use rspec for testing
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.5.2'
+end
 
-gem 'capybara',  group: :test
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara'
+end
+
+# # Use sqlite3 as the database for Active Record
+# gem 'sqlite3', '1.3.8',   group: :development
+
+# # Use rspec for testing
+# gem 'rspec-rails', '2.13.1', group: :development
+
+# gem 'selenium-webdriver', '2.35.1', group: :test
+
+# gem 'guard-rspec', '2.5.0', group: :test
+
+# gem 'capybara',  group: :test
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
