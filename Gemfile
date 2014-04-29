@@ -22,6 +22,8 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara'
+  gem 'minitest'
+  gem 'factory_girl_rails', '4.4.1'
 end
 
 # # Use sqlite3 as the database for Active Record
